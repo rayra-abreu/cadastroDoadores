@@ -25,7 +25,7 @@ nunjucks.configure('./', {
     noCache: true,
 })
 
-/*LISTA DE DOADORES
+//LISTA DE DOADORES
 const donors=[
     {
         name:"Diego Fernandes",
@@ -44,12 +44,12 @@ const donors=[
         blood:"O+"
     },
 ]
-*/
+
 //CONFIGURA A APRESENTAÇÃO DA PÁGINA
 server.get('/', function(req, res){
-    db.query('SELECT * FROM donors', function(err, result){
+    /*db.query('SELECT * FROM donors', function(err, result){
         const donors=result.rows
-        if (err) return res.send('Erro no banco de dados !')
+        if (err) return res.send('Erro no banco de dados !')*/
     return res.render('index.html', {donors})
     })
 })
