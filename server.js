@@ -60,12 +60,12 @@ server.post('/', function(req, res){
     const blood=req.body.blood
 
     if(name=='' || email=='' || blood==''){
-        return res.send('Todos os campos são obrigatórios !')
+        return alert('Todos os campos são obrigatórios !')
     }
-    /*donors.push({
+    donors.push({
         name: name,
         blood: blood
-    })*/
+    })
 
     //COLOCO VALORES DENTRO DO BANCO DE DADOS
     const query=`INSERT INTO donors ("name", "email", "blood")
