@@ -49,9 +49,8 @@ const donors=[
 server.get('/', function(req, res){
     /*db.query('SELECT * FROM donors', function(err, result){
         const donors=result.rows
-        if (err) return res.send('Erro no banco de dados !')*/
-    return res.render('index.html', {donors})
-    })
+        if (err) return res.send('Erro no banco de dados !')    
+    })*/return res.render('index.html', {donors})
 })
 
 server.post('/', function(req, res){
